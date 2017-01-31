@@ -1,0 +1,42 @@
+
+Date:
+01/12/2016
+
+Symptom:
+A functional test failing because of an element value not found displayed where
+this element is result from mocked server response provided by Okhttp mockwebserver
+
+Cause:
+turned out to be because the api service was null and it has silently swallowing an
+NPE 
+
+How found:
+- By putting breakpoints on all concerned method in the test ui fragment and specialy by
+inspecting the values inside each field used.
+- Inspecting and putting breakpoint in even the called libraries where the problem is related
+   and is there 
+
+
+Fix:
+
+Fixed in file(s):
+
+
+Caused by me:
+Yes
+
+Time taken to resolve bug:
+4hrs (mostly to find where the issue is)
+
+Lessons:
+
+How could I have sped up finding this bug?
+- Suspecting that the cause is it the recent made changes and putting breakpoints eveywhere
+in the ui where the test is failing and inspecting the content of all the fields.
+- Not getting frustrated and taking it as a learning opportunity.
+
+Is it clear from the bug that it should have been caught in testing. If so, testing at which point – unit, functional, system ?
+
+What mistakes did I make in the code?
+
+

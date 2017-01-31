@@ -1,0 +1,46 @@
+
+
+Date:
+31/01/2017
+
+Symptom:
+ExceptionInInitializerError in a dagger provide module (specificaly for provideMonitoring )
+
+
+Cause:
+an NPE in a dependency of APIProvider which is used by Monitoring component and that dependency is JsonDeserializer
+where it called getAsString on a null object.
+
+How found:
+By carefully reading and understanding possible causes what ExceptionInInitializerError is and when it can occur
+in the java documentatio.
+
+Fix:
+
+Fixed in file(s):
+An object json deserializer
+
+Caused by me:
+Yes
+
+Time taken to resolve bug:
+30mn
+
+Lessons:
+- Read the documentation of the exception class right away and always blame your own code first.
+
+How could I have sped up finding this bug?
+- By reading the documentation right away
+
+Is it clear from the bug that it should have been caught in testing. If so, testing at which point – unit, functional, system ?
+
+What mistakes did I make in the code?
+- not checking for null and edge cases
+
+What were the assumptions that i've made that were wrong ?
+- that the crash is cause by dagger somehow affecting the class loading not to be working
+
+Actions:
+- Read a lot more on Java Exceptions and their Semantics and their different types.
+- See if a bug report to dagger is needed to make these kind of crash report more understandable and test on a small example
+   

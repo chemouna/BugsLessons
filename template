@@ -1,0 +1,32 @@
+
+Date:
+
+
+Symptom:
+
+
+Cause:
+
+
+How found:
+
+
+Fix:
+
+Fixed in file(s):
+
+Caused by me:
+
+
+Time taken to resolve bug:
+
+
+Lessons:
+
+How could I have sped up finding this bug?
+
+Is it clear from the bug that it should have been caught in testing. If so, testing at which point – unit, functional, system ?
+
+What mistakes did I make in the code?
+
+What were the assumptions that i've made that were wrong ? 
